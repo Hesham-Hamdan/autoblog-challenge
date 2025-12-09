@@ -107,15 +107,43 @@ Located in `infra/scripts/`:
 
 ## 📂 Project Structure
 
+```bash
 .
-├── backend/ # Node.js Express API & Scheduler
-├── frontend/ # React App (Vite)
-├── infra/ # Infrastructure Config
-│ ├── buildspec.yml # AWS CodeBuild instructions
-│ ├── docker-compose.yml
-│ └── scripts/ # Deployment shell scripts
-├── docs/ # Architecture documentation
+├── backend/
+│   ├── src/
+│   │   ├── index.js
+│   │   ├── routes/
+│   │   ├── services/
+│   │   │   ├── aiClient.js
+│   │   │   └── articleJob.js
+│   │   └── models/
+│   ├── package.json
+│   ├── Dockerfile
+│   └── README.md
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── api/
+│   │   │   └── client.js
+│   │   └── App.jsx
+│   ├── package.json
+│   ├── Dockerfile
+│   └── README.md
+│
+├── infra/
+│   ├── buildspec.yml
+│   ├── docker-compose.yml
+│   └── scripts/
+│       ├── deploy.sh
+│       └── init-ec2.sh
+│
+├── docs/
+│   └── ARCHITECTURE.md
+│
 └── README.md
+```
 
 ## 👤 Author
 
